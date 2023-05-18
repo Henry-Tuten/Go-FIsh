@@ -13,6 +13,6 @@ public class SingleGoFish {
 
    //Message to confirm game start
    public void showMessage(){
-    System.out.println("---Game Started---");
+    System.out.println("\n---Welcome!---");
  }
 }

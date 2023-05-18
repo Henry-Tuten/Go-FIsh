@@ -29,14 +29,21 @@
         margin-bottom: 50px; /* added margin */
         background-color: white; /* added background color */
         padding: 10px; /* added padding */
+        overflow-y: scroll; /* added scroll bar */
       }
     </style>
   </head>
   <body>
     <div id="output"></div> <!-- added output section -->
     <input type="text" placeholder="Enter your text here">
+    
+    <script>
+      // JavaScript code to display output in the white box
+      var output = document.getElementById("output");
+      
+      // Your Java code goes here
+      // Example:
+      output.innerHTML = "Hello, world!";
+    </script>
   </body>
-
-
-
 </html>

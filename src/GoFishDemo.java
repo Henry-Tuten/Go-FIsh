@@ -42,6 +42,18 @@ public class GoFishDemo {
         SingleGoFish object = SingleGoFish.getInstance();
         object.showMessage();    
 
+        // Account Creation
+        // Prompt the user for the account name and password
+        Scanner scanner = new Scanner(System.in);
+
+        
+
+        //Account class working
+        Account account = new Account();
+        account.saveToDatabase();;
+
+ 
+
         // Factory Pattern to create deck of cards
         //--------------------------------------------------
 
@@ -67,12 +79,12 @@ public class GoFishDemo {
         //--------------------------------------------------
         // Print Deck of cards
         //--------------------------------------------------
-        for (Card card : deck) {
-            String name = card.getName();
-            int value = card.getValue();
-            String suit = card.getSuit();
-            System.out.println(name + " " + suit);
-        }
+        //for (Card card : deck) {
+         //   String name = card.getName();
+         //   int value = card.getValue();
+         //   String suit = card.getSuit();
+         //   System.out.println(name + " " + suit);
+       // }
         //--------------------------------------------------
 
         //BUILDER PATTERN FOR CREATING HANDS
@@ -91,21 +103,21 @@ public class GoFishDemo {
         
 
         //Print out randomCards
-        System.out.println("Player Hand:");
-        for (Card card : playerHand) {
-            System.out.println(card.getName() + " of " + card.getSuit());
-        }
+        //System.out.println("\nPlayer Hand:");
+        //for (Card card : playerHand) {
+        //    System.out.println(card.getName() + " of " + card.getSuit());
+        //}
         
-        System.out.println("\nComputer hand:");
-        for (Card card : computerHand) {
-            System.out.println(card.getName() + " of " + card.getSuit());
-        }
+        //System.out.println("\nComputer hand:");
+        //for (Card card : computerHand) {
+        //    System.out.println(card.getName() + " of " + card.getSuit());
+        //}
 
         //print remaining cards in deck
-        System.out.println("\nRemaining cards:");
-        for (Card card : deck) {
-            System.out.println(card.getName() + " of " + card.getSuit());
-        }
+        //System.out.println("\nRemaining cards:");
+        //for (Card card : deck) {
+       //     System.out.println(card.getName() + " of " + card.getSuit());
+       // }
 
         //BUILDER FOR randomCards working
         //--------------------------------------------------
@@ -114,11 +126,11 @@ public class GoFishDemo {
 
 
         // Create Scanner
-        Scanner scanner = new Scanner(System.in);
+        
         // Needs to be closed at some point
 
         // Ask for Difficulty Level
-        System.out.print("Select difficulty level:\n1: Easy\n2: Medium\n3: Hard\n\n");
+        System.out.print("\nSelect difficulty level:\n1: Easy\n2: Medium\n3: Hard\n\n");
         String difficulty = scanner.nextLine();
 
         // Use the selected difficulty to set game parameters
@@ -141,10 +153,12 @@ public class GoFishDemo {
         
         else if (difficulty.equals("2")) {
             context = new Context(new MediumAIStrategy());
-            System.out.println("Difficulty Set To Medium");
+            System.out.println("Difficulty Set To Medium\n");
+
         } else if (difficulty.equals("3")) {
             context = new Context(new HardAIStrategy());
-            System.out.println("Difficulty Set To Hard");
+            System.out.println("Difficulty Set To Hard\n");
+            
         } else {
             System.out.println("Invalid difficulty level.");
         }
@@ -158,7 +172,7 @@ public class GoFishDemo {
             //Initialize arraylist string for card selections
             
             //
-            System.out.println("Player Hand:");
+            System.out.println("Your Hand:");
             for (Card card : playerHand) {
                 System.out.println(card.getName() + " of " + card.getSuit());
             }
