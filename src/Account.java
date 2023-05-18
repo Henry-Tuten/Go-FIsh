@@ -28,9 +28,9 @@ public class Account {
         }
     
         // Check if the account already exists in the database
-        String url = "jdbc:sqlserver://gofish.database.windows.net:1433;database=gofishdatabase;user=admin1@gofish;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;";
-        String user = "admin1@gofish.database.windows.net";
-        String dbPassword = "Abc8008135";
+        String url = "";
+        String user = "";
+        String dbPassword = "";
         boolean accountExists = false;
     
         try (Connection conn = DriverManager.getConnection(url, user, dbPassword)) {
